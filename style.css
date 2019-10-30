@@ -1,0 +1,25 @@
+.history{
+    background-image: url(./assets/bricks.png);
+    background-repeat: no-repeat;
+    background-position: center left ;
+    background-size: 60%;
+}
+
+.social, .cb {
+    text-align: center;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+.social {
+    margin:2rem 0;
+}
+.login {
+    padding: 2rem 0;
+}
+.fa-user {
+    font-size: 2rem;
+}
+.firstRow, .breadcrumb {
+    background-color: rgba(227, 237, 255, 0.28);
+}

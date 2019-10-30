@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <div class="container-lg-fluid">
+        <div class="row no-gutters firstRow">
+            <div class="col-12">
+                <header>
+                    <nav class="navbar navbar-dark bg-dark navbar-expand-lg justify-content-between">
+                        <a class="navbar-brand text-white">Brique en Barre</a>
+                        <form class="form-inline ">
+                            <input class="form-control mr-sm-2 collapse navbar-collapse" type="search"
+                                placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i
+                                    class="fas fa-search"></i></button>
+                            <a href="basket.html" class="btn btn-outline-success my-2 my-sm-0 ml-2"><i
+                                    class="fas fa-cart-arrow-down"></i></a>
+
+                            <span class="badge badge-pill badge-success">5</span>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </form>
+                    </nav>
+                </header>
+            </div>
+            <div class="col-12">
+                <div class="row no-gutters">
+                    <div class="col-12 p-0 order-2 order-lg-1 ">
+                        <main>
+                            <div class="row no-gutters">
+                                <div class="col-12">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                            <li class="breadcrumb-item"><a href="#">Catalog</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">Product Sheet</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                                <div class="row history w-100">
+                                    <div class="col-12 mb-4 mt-4 table-responsive pr-0">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" class="d-none d-md-block">#</th>
+                                                    <th scope="col">Product Name</th>
+                                                    <th scope="col" class="d-none d-md-block">Description</th>
+                                                    <th scope="col">Quantity</th>
+                                                    <th scope="col" class="d-none d-md-block">Unit Price</th>
+                                                    <th scope="col">Total Price</th>
+                                                    <th scope="col" class="d-none d-md-block">Delete</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row" class="d-none d-md-block">1</th>
+                                                    <td>Mark</td>
+                                                    <td class="d-none d-md-block">Otto</td>
+                                                    <td><input type="number" value="0" min="0" max="1000" step="1" />
+                                                    </td>
+                                                    <td class="d-none d-md-block">00.00</td>
+                                                    <td>00.00</td>
+                                                    <td><i class="far fa-trash-alt"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="d-none d-md-block">2</th>
+                                                    <td>Jacob</td>
+                                                    <td class="d-none d-md-block">Thornton</td>
+                                                    <td><input type="number" value="0" min="0" max="1000" step="1" />
+                                                    </td>
+                                                    <td class="d-none d-md-block">00.00</td>
+                                                    <td>00.00</td>
+                                                    <td><i class="far fa-trash-alt"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="d-none d-md-block">3</th>
+                                                    <td>Larry</td>
+                                                    <td class="d-none d-md-block">the Bird</td>
+                                                    <td><input type="number" value="0" min="0" max="1000" step="1" />
+                                                    </td>
+                                                    <td class="d-none d-md-block">00.00</td>
+                                                    <td>00.00</td>
+                                                    <td><i class="far fa-trash-alt"></i></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="col-12 mb-4 mt-4 table-responsive">
+                                        <table class="table ">
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row" class="text-right">Total H.T.</th>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td class="text-center">0.00$</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="text-right">Dont T.V.A.</th>
+                                                    <td></td>
+                                                    <td>20%</td>
+                                                    <td class="text-center">0.25$</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="text-right">Total TTC</th>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td class="text-center">00.25$</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </main>
+                    </div>
+                    <div class="col-12 col-lg-0 collapse order-1 order-lg-2" id="navbarSupportedContent">
+                        <aside>
+                            <div class="row no-gutters">
+                                <div class="col-12">
+                                    <div class="row login">
+                                        <div class="col-2">
+                                            <i class="far fa-user"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <button type="button" class="btn btn-warning">Warning</button>
+                                            <button type="button" class="btn btn-danger ml-3">Danger</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="card">
+                                        <img src="./assets/Image from iOS.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Notre PDG</h5>
+                                            <p class="card-text">JB, notre PD de l'entreprise fait part de son message :
+                                                "Je vous accueille avec ma grosse....équipe (lol) du lundi au vendredi à
+                                                toute heure."</p>
+                                            <p>Notre email: <a
+                                                    href="mailto:briques.velues@brique-en-barre.com">briques.velues@brique-en-barre.com</a>
+                                            </p>
+                                            <a href="#" class="btn btn-primary">Call me baby</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 social">
+                                    <i class="fab fa-twitter"></i>
+                                    <i class="fab fa-facebook-f"></i>
+                                    <i class="fab fa-google-plus-g"></i>
+                                    <i class="fab fa-pinterest-p"></i>
+                                    <i class="fab fa-reddit-alien"></i>
+                                </div>
+                                <div class="col-12 cb">
+                                    <i class="fab fa-cc-visa"></i>
+                                    <i class="fab fa-cc-mastercard"></i>
+                                    <i class="fab fa-cc-paypal"></i>
+                                    <i class="fab fa-cc-apple-pay"></i>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 bg-dark text-white">
+                <footer>
+                    <p class="w-50 m-auto text-center"><a href="contact.html">CONTACT </a>| <a
+                            href="legal.html">Mentions Légales </a>| <a href="#">Copyright</a></p>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="node_modules/bootstrap-input-spinner/src/bootstrap-input-spinner.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
