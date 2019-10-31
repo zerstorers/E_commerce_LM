@@ -1,3 +1,5 @@
+
+
 .history{
     background-image: url(./assets/bricks.png);
     background-repeat: no-repeat;
@@ -7,10 +9,12 @@
 
 .social, .cb {
     text-align: center;
-    font-size: 2rem;
-    display: flex;
-    justify-content: space-around;
+    font-size: 1.2rem;
 }
+i {
+    padding: 0 0.5rem;
+}
+
 .social {
     margin:2rem 0;
 }
@@ -22,4 +26,13 @@
 }
 .firstRow, .breadcrumb {
     background-color: rgba(227, 237, 255, 0.28);
+}
+
+.carousel-caption:hover {
+    background-color: rgba(0, 0, 0, 0.63);
+}
+.paginationNav {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
 }

@@ -14,12 +14,12 @@
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container-lg-fluid">
         <div class="row no-gutters firstRow">
             <div class="col-12">
                 <header>
                     <nav class="navbar navbar-dark bg-dark navbar-expand-lg justify-content-between">
-                        <a class="navbar-brand text-white">Brique en Barre</a>
+                        <a class="navbar-brand text-white" href="index.html">Brique en Barre</a>
                         <form class="form-inline ">
                             <input class="form-control mr-sm-2 collapse navbar-collapse" type="search"
                                 placeholder="Search" aria-label="Search">
@@ -46,8 +46,8 @@
                                 <div class="col-12">
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb m-0 pr-0">
-                                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                            <li class="breadcrumb-item"><a href="#">Catalog</a></li>
+                                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                            <li class="breadcrumb-item"><a href="catalog.html">Catalog</a></li>
                                             <li class="breadcrumb-item active" aria-current="page">Product Sheet</li>
                                         </ol>
                                     </nav>
@@ -58,12 +58,12 @@
                                         <div class="col-12 mt-lg-4 mb-4">
                                             <div class="row">
                                                 <div class="col-6 text-left">
-                                                    <a href="#">
+                                                    <a class="previous">
                                                         < Previous
                                                     </a>                                                   
                                                 </div>
                                                 <div class="col-6 text-right">                                                    
-                                                        <a href="#">
+                                                        <a class="next">
                                                             Next >
                                                         </a>                                                 
                                                 </div>
@@ -103,16 +103,12 @@
                                                         alt="...">
                                                 </div>
                                                 <div class="col-12 col-lg-6">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Product</h5>
-                                                        <p class="card-text">This is a wider card with supporting
-                                                            text below
-                                                            as a natural lead-in to additional content. This content
-                                                            is a
-                                                            little bit longer.</p>
-                                                            <p>Quantity : 12</p>
-                                                        <p class="card-text"> Price : 0.00$</p>
-                                                        <a href="basket.html" class="btn btn-success">Add to Basket</a>
+                                                    <div class="card-body pt-0">
+                                                        <h5 class="card-title font-weight-bold"></h5>
+                                                        <p class="card-text"></p>
+                                                            <p>Quantity : <span class="quantity"></span></p>
+                                                        <p class="font-weight-bold"> Price : <span class="price"></span> $</p>
+                                                        <a href="basket.html" class="btn btn-success"></a>
                                                     </div>
                                                 </div>
 
@@ -122,12 +118,13 @@
                                         <div class="col-12">
                                                 <div class="row">
                                                     <div class="col-6 text-left">
-                                                        <a href="#">
+                                                        <a class="previous">
                                                             < Previous
                                                         </a>                                                   
                                                     </div>
+                                                   
                                                     <div class="col-6 text-right">                                                    
-                                                            <a href="#">
+                                                            <a class="next">
                                                                 Next >
                                                             </a>                                                 
                                                     </div>
@@ -192,7 +189,7 @@
             <div class="col-12 bg-dark text-white">
                 <footer>
                     <p class="w-50 m-auto text-center"><a href="contact.html">CONTACT </a>| <a
-                            href="legal.html">Mentions Légales </a>| <a href="#">Copyright</a></p>
+                            href="legal.html">Mentions Légales </a>| <a href="./assets/copyright.jpg">Copyright</a></p>
                 </footer>
             </div>
         </div>
@@ -202,7 +199,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+    <script src="catalog_x100.js"></script>
+    <script src="script_product_sheet.js"></script>
 </body>
 
 </html>

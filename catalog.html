@@ -15,58 +15,60 @@
 
 <body>
     <div class="container-fluid">
-        <div class="row no-gutters firstRow">
-            <div class="col-12">
-                <header>
-                    <nav class="navbar navbar-dark bg-dark navbar-expand-lg justify-content-between">
-                        <a class="navbar-brand text-white">Brique en Barre</a>
-                        <form class="form-inline ">
-                            <input class="form-control mr-sm-2 collapse navbar-collapse" type="search"
-                                placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i
-                                    class="fas fa-search"></i></button>
-                            <a href="basket.html" class="btn btn-outline-success my-2 my-sm-0 ml-2"><i
-                                    class="fas fa-cart-arrow-down"></i></a>
+        <div class="row firstRow">
+            <header class="col-12 bg-dark">
+                <nav class="navbar navbar-dark navbar-expand-lg justify-content-between">
+                    <a class="navbar-brand text-white" href="index.html">Brique en Barre</a>
+                    <form class="form-inline ">
+                        <input class="form-control mr-sm-2 collapse navbar-collapse" type="search" placeholder="Search"
+                            aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i
+                                class="fas fa-search"></i></button>
+                        <a href="basket.html" class="btn btn-outline-success my-2 my-sm-0 ml-2"><i
+                                class="fas fa-cart-arrow-down"></i></a>
 
-                            <span class="badge badge-pill badge-success">5</span>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                        </form>
-                    </nav>
-                </header>
-            </div>
+                        <span class="badge badge-pill badge-success">5</span>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </form>
+                </nav>
+            </header>
             <div class="col-12">
                 <div class="row no-gutters">
-                    <div class="col-12 p-0 order-2 order-lg-1">
-                        <main>
-                            <div class="row no-gutters">
-                                <div class="col-12">
-                                    <nav aria-label="breadcrumb">
-                                        <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                            <li class="breadcrumb-item"><a href="#">Catalog</a></li>
-                                            <li class="breadcrumb-item active" aria-current="page">Product Sheet</li>
-                                        </ol>
-                                    </nav>
-                                </div>
-                                <div class="col-12 text-right">
-                                        <i class="fas fa-filter mr-2"> Filter</i>
-                                        <i class="fas fa-list-ul mr-3">  Sort</i>
-                                </div>
-                                <div class="history">                          
-                                    <div class="col-12 mb-4">
-                                        <div class="row catalog">
+                    <main class="col-12 p-0 order-2 order-lg-1">
 
-                                        </div>
-                                    </div>
-                                </div>
-                                
+                        <div class="row no-gutters">
+                            <div class="col-12">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                        <li class="breadcrumb-item"><a href="#">Catalog</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Product Sheet</li>
+                                    </ol>
+                                </nav>
                             </div>
-                        </main>
-                    </div>
+                            <div class="col-12 text-right">
+                                <i class="fas fa-filter mr-2"> Filter</i>
+                                <i class="fas fa-list-ul mr-3"> Sort</i>
+                            </div>
+
+                            <div class="history col-12 mb-4">
+                                <div class="row catalog">
+
+                                </div>
+                                <div id="pagin">
+                                    
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </main>
+
                     <div class="col-12 col-lg-3 collapse order-1 order-lg-2" id="navbarSupportedContent">
                         <aside>
                             <div class="row no-gutters">
@@ -86,8 +88,10 @@
                                         <img src="./assets/Image from iOS.jpg" class="card-img-top" alt="...">
                                         <div class="card-body">
                                             <h5 class="card-title">Notre PDG</h5>
-                                            <p class="card-text">JB, notre PD de l'entreprise fait part de son message :
-                                                "Je vous accueille avec ma grosse....équipe (lol) du lundi au vendredi à
+                                            <p class="card-text">JB, notre PD de l'entreprise fait part de son
+                                                message :
+                                                "Je vous accueille avec ma grosse....équipe (lol) du lundi au
+                                                vendredi à
                                                 toute heure."</p>
                                             <p>Notre email: <a
                                                     href="mailto:briques.velues@brique-en-barre.com">briques.velues@brique-en-barre.com</a>
@@ -114,12 +118,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 bg-dark text-white">
-                <footer>
-                    <p class="w-50 m-auto text-center"><a href="contact.html">CONTACT </a>| <a
-                            href="legal.html">Mentions Légales </a>| <a href="#">Copyright</a></p>
-                </footer>
-            </div>
+            <footer class="col-12 bg-dark text-white">
+
+                <p class="w-50 m-auto text-center"><a href="contact.html">CONTACT </a>| <a href="legal.html">Mentions
+                        Légales </a>| <a href="./assets/copyright.jpg">Copyright</a></p>
+            </footer>
+
         </div>
     </div>
     <!-- Optional JavaScript -->
@@ -127,8 +131,9 @@
     <script src="./node_modules/jquery/dist/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./node_modules/rangeslider-js/dist/rangeslider-js.min.js"></script>
     <script src="catalog_x100.js"></script>
-    <script src="script.js"></script>
+    <script src="script_catalog.js"></script>
 </body>
 
 </html>
