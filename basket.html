@@ -20,7 +20,7 @@
                 <header>
                     <nav class="navbar navbar-dark bg-dark navbar-expand-lg justify-content-between">
                         <a class="navbar-brand text-white" href="index.html">Brique en Barre</a>
-                        <form class="form-inline ">
+                        <form class="form-block ">
                             <input class="form-control mr-sm-2 collapse navbar-collapse" type="search"
                                 placeholder="Search" aria-label="Search">
                             <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i
@@ -56,19 +56,19 @@
                                     <div class="col-12 mb-4 mt-4 table-responsive pr-0">
                                         <table class="table table-striped">
                                             <thead>
-                                                <tr>
-                                                    <th scope="col" class="d-none d-md-block">#</th>
-                                                    <th scope="col">Product Name</th>
-                                                    <th scope="col" class="d-none d-md-block">Description</th>
-                                                    <th scope="col">Quantity</th>
-                                                    <th scope="col" class="d-none d-md-block">Unit Price</th>
-                                                    <th scope="col">Total Price</th>
-                                                    <th scope="col" class="d-none d-md-block">Delete</th>
+                                                <tr class="w-100 d-flex justify-content-between">
+                                                    <th scope="col" class="d-none d-md-inline">#</th>
+                                                    <th scope="col" class="d-none d-md-inline">Product Name</th>
+                                                    <th scope="col" class="d-none d-md-inline">Description</th>
+                                                    <th scope="col" class="d-none d-md-inline">Quantity</th>
+                                                    <th scope="col" class="d-none d-md-inline">Unit Price</th>
+                                                    <th scope="col" class="d-none d-md-inline">Total Price</th>
+                                                    <th scope="col" class="d-none d-md-inline">Delete</th>
                                                 </tr>
                                             </thead>
                                             <tbody id="basket">
                                                 <!-- <tr>
-                                                    <th scope="row" class="d-none d-md-block">1</th>
+                                                    <th scope="row" class="d-none d-md-">1</th>
                                                     <td class="name">Mark</td>
                                                     <td class="d-none d-md-block">Otto</td>
                                                     <td><input type="number" value="0" min="0" max="1000" step="1" />
@@ -107,13 +107,13 @@
                                                     <th scope="row" class="text-right">Total H.T.</th>
                                                     <td></td>
                                                     <td></td>
-                                                    <td class="text-center">0.00$</td>
+                                                    <td class="text-center prixHT"></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row" class="text-right">Dont T.V.A.</th>
                                                     <td></td>
                                                     <td>20%</td>
-                                                    <td class="text-center">0.25$</td>
+                                                    <td class="text-center tva"></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row" class="text-right">Total TTC</th>
