@@ -14,7 +14,20 @@ $(document).ready(function () {
     //         quantity: 7
     //     },
     // ]
+// récupération session Storage
 
+
+var cart = sessionStorage.getItem(cart);
+cart =JSON.parse(cart)
+console.log(cart);
+
+var cart = sessionStorage.getItem("cart");
+
+    if(cart == null) {
+        cart = []
+    } else {
+        cart = JSON.parse(cart)
+    }
     // génération ligne de panier
 
     //  
@@ -89,7 +102,9 @@ $(document).ready(function () {
         var TP = $("#" + idTotalPrice)
         var result = parseInt($(this).val()) * parseInt(UP.html())
         TP.html(result)
+        
 
+        
         // Generation du grand Total
         var sum = 0
         $(".total_price").each(function () {
@@ -116,11 +131,7 @@ $(document).ready(function () {
         row.remove()
     })
 
-    // récupération session Storage
 
-    var cart_str = sessionStorage.getItem(cart);
-    JSON.parse(cart_str)
-    console.log(cart_str);
     
 })
 
