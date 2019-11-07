@@ -45,43 +45,39 @@ $(document).ready(function () {
     //  ?product_id=" + GET_PARAM("product_id") + ""
 
     // Creation var cart
-    var cart = []
+    
+
+    var cart = sessionStorage.getItem("cart")
+    if(cart == null) {
+        cart = []
+    } else {
+        cart = JSON.parse(cart)
+    }
+    
+
+
     $('.btn-success').click(function () {
-        var cartItem = {
-            productId: GET_PARAM("product_id"),
-                quantity: 1
+        
+        found = false
+        for (let i = 0; i < cart.length; i++) {
+            if(cart[i].productId == GET_PARAM("product_id")){
+                cart[i].quantity += 1
+                found = true
+            }
         }
-        cart.push(cartItem)
+        
+        if( found == false) {
+            var cartItem = {
+                productId: GET_PARAM("product_id"),
+                quantity: 1
+            }
+            cart.push(cartItem)
+        }
 
 
         // session storage
         var cart_json = JSON.stringify(cart);
         sessionStorage.setItem("cart", cart_json);
-
-        
-        var cart_str = sessionStorage.getItem(cart);
-        var cartNew = JSON.parse(cart_str)
-        
-        
-            if (cartNew == null) {
-                cart.push(cartItem)
-                
-                
-
-                var incr_quant = cart.quantity + 1
-                var cartItem = {
-                    productId: GET_PARAM("product_id"),
-                    quantity: incr_quant
-                }
-                sessionStorage.clear()
-                var cart_json = JSON.stringify(cart);
-                sessionStorage.setItem("cart", cart_json);
-                
-                
-
-            
-
-        }
 
 
     })
