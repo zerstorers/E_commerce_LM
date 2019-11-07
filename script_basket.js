@@ -1,19 +1,19 @@
 $(document).ready(function () {
 
-    var cart = [
-        {
-            productId: 1,
-            quantity: 1
-        },
-        {
-            productId: 42,
-            quantity: 2
-        },
-        {
-            productId: 5,
-            quantity: 7
-        },
-    ]
+    // var cart = [
+    //     {
+    //         productId: 1,
+    //         quantity: 1
+    //     },
+    //     {
+    //         productId: 42,
+    //         quantity: 2
+    //     },
+    //     {
+    //         productId: 5,
+    //         quantity: 7
+    //     },
+    // ]
 
     // génération ligne de panier
 
@@ -46,7 +46,6 @@ $(document).ready(function () {
         cpt += 1
         $(tableth).html(cpt)
         // 
-
 
         // Ajout des donné dynamique name/description/quantité/prix
         $(".product_name:eq(" + i + ")").html(catalog[cartItem.productId].name)
@@ -116,6 +115,13 @@ $(document).ready(function () {
         var row = $("#" + idRow)
         row.remove()
     })
+
+    // récupération session Storage
+
+    var cart_str = sessionStorage.getItem(cart);
+    JSON.parse(cart_str)
+    console.log(cart_str);
+    
 })
 
 
