@@ -36,21 +36,21 @@ var cart = sessionStorage.getItem("cart");
 
         // Génération des lignes panier
         var cartItem = cart[i]
-        var tableRow = $('<tr id="rowProduct-' + i + '">')
+        var tableRow = $('<tr id="rowProduct-' + cartItem.productId + '">')
         $("#basket").append(tableRow)
-        var tableth = $('<th scope="row" id="productNum-'+ i +'" class="d-none d-md-block">')
+        var tableth = $('<th scope="row" id="productNum-'+ cartItem.productId +'" class="d-none d-md-block">')
         tableRow.append(tableth)
-        var tableProductName = $('<td id="productName-' + i + '"class="product_name">')
-        var tableDesc = $('<td id="prodDesc-' + i + '"class="d-none d-md-block prod_desc">')
+        var tableProductName = $('<td id="productName-' + cartItem.productId + '"class="product_name">')
+        var tableDesc = $('<td id="prodDesc-' + cartItem.productId + '"class="d-none d-md-block prod_desc">')
         tableRow.append(tableProductName)
         tableRow.append(tableDesc)
-        var tableinput = $('<td> <input type="number" id="input-' + i + '" class="quantity" value="0" min="0" max="1000" step="1" /> ')
+        var tableinput = $('<td> <input type="number" id="input-' + cartItem.productId + '" class="quantity" value="0" min="0" max="1000" step="1" /> ')
         tableRow.append(tableinput)
-        var unitPrice = ('<td id="unitPrice-' + i + '"class=" d-none d-md-block unit_price">')
+        var unitPrice = ('<td id="unitPrice-' + cartItem.productId + '"class=" d-none d-md-block unit_price">')
         tableRow.append(unitPrice)
-        var totalPrice = ('<td id="totalPrice-' + i + '"class="total_price">')
+        var totalPrice = ('<td id="totalPrice-' + cartItem.productId + '"class="total_price">')
         tableRow.append(totalPrice)
-        var tableTrash = $('<td><i id="trash-' + i + '"class="far fa-trash-alt pr-5">')
+        var tableTrash = $('<td><i id="trash-' + cartItem.productId + '"class="far fa-trash-alt pr-5">')
         tableRow.append(tableTrash)
         // 
 
@@ -66,8 +66,6 @@ var cart = sessionStorage.getItem("cart");
         tableDesc.text(tableDesc.text().substr(0, 30) + '...');
         var inputQuantity = $(".quantity:eq(" + i + ")").val(cartItem.quantity)
         $(".unit_price:eq(" + i + ")").html(catalog[cartItem.productId].price)
-        // 
-
         var result = inputQuantity.val() * catalog[cartItem.productId].price
         $(".total_price:eq(" + i + ")").html(result)
 
@@ -96,6 +94,11 @@ var cart = sessionStorage.getItem("cart");
 
     $(".quantity").change(function () {
         var idQuant = $(this).attr("id")
+        cartItem.quantity = idQuant.val(cartItem.quantity)
+        cart.push(cartItem.quantity)
+        var cart_json = JSON.stringify(cart);
+        sessionStorage.setItem("cart", cart_json);
+
         var idUP = idQuant.replace("input", "unitPrice")
         var idTotalPrice = idUP.replace("unitPrice", "totalPrice")
         var UP = $("#" + idUP)
@@ -125,16 +128,28 @@ var cart = sessionStorage.getItem("cart");
     })
     $(".far").click(function () {
         var idTrash = $(this).attr("id")
-        var idRow = idTrash.replace("trash", "rowProduct")
+        console.log(idTrash)
+
+        var idRow = idTrash.replace("trash-", "rowProduct-")
         console.log(idRow)
         var row = $("#" + idRow)
-        cart.pop(row)
-        console.log(row)
         row.remove()
+
+        var idCart = idTrash.replace("trash-", "")
+        for (let i = 0; i < cart.length; i++) {
+            if(idCart == cart[i].productId){
+                cart.splice(i,1)
+                var cart_json = JSON.stringify(cart);
+                sessionStorage.setItem("cart", cart_json);
+                
+            }
+
+            
+            
+        }
+        console.log(cart)
         
 
-        var cart_json = JSON.stringify(cart);
-        sessionStorage.setItem("cart", cart_json);
 
     })
 
