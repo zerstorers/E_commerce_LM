@@ -128,7 +128,14 @@ var cart = sessionStorage.getItem("cart");
         var idRow = idTrash.replace("trash", "rowProduct")
         console.log(idRow)
         var row = $("#" + idRow)
+        cart.pop(row)
+        console.log(row)
         row.remove()
+        
+
+        var cart_json = JSON.stringify(cart);
+        sessionStorage.setItem("cart", cart_json);
+
     })
 
 
